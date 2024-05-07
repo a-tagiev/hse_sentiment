@@ -127,7 +127,7 @@ async def main() -> None:
 
     flat_comments = reduce(iconcat, all_comments, [])
 
-    with open("comments.json", "wb") as json_file:
+    with open("data/comments.json", "wb") as json_file:
         json_file.write(orjson.dumps(flat_comments))
 
 
