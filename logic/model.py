@@ -1,9 +1,12 @@
+import random
+
+
 class Model:
     def __init__(self):
         ...
 
     def predict(self, text: str) -> int:
-        return 0
+        return random.randint(-1, 1)
 
 
 model = Model()
