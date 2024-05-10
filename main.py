@@ -44,6 +44,6 @@ async def favicon():
 async def api(text: str = Body(embed=True)):
     prediction = await predict_async(text)
 
-    logging.info(f"{prediction.upper()} - {text}]")
+    logging.info(f"{prediction.upper()} - {text}")
 
     return {"text": text, "sentiment": prediction}
