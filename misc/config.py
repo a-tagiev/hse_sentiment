@@ -1,6 +1,9 @@
-from pathlib import Path
+import os
 
 
-class Paths:
-    resources = Path("resources")
-    favicon = Path(resources, "favicon.png")
+TOKEN = os.getenv("TOKEN")
+
+
+API_URL = "https://kruase.serveo.net/api"
+
+rate_limit_timeout = 3

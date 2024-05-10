@@ -4,10 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastapi = "*"
-pydantic = "*"
-python-multipart = "*"
-uvicorn = {extras = ["standard"], version = "*"}
+aiogram = "*"
+orjson = "*"
 
 [dev-packages]
 
