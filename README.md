@@ -43,6 +43,6 @@ uvicorn main:app
 ## Stack
 
 - [python 3.12](https://python.org) - programming language
-- [something]() - ML processor
+- [scikit-learn](https://pypi.org/project/scikit-learn) - Logistic regression
 - [FastAPI](https://pypi.org/project/fastapi) - web server engine
 - And more

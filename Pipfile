@@ -8,6 +8,8 @@ fastapi = "*"
 pydantic = "*"
 python-multipart = "*"
 uvicorn = {extras = ["standard"], version = "*"}
+scikit-learn = "=1.3.2"
+nltk = "*"
 
 [dev-packages]
 

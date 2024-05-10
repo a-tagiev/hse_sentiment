@@ -1,3 +1,5 @@
+import logging
+
 from fastapi import FastAPI, Body
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,6 +21,14 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+logging.basicConfig(
+    level=logging.INFO,
+    filename=Paths.get_log_path(),
+    filemode="a",
+    format="[%(asctime)s %(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d_%H:%M:%S",
+)
+
 
 @app.get("/")
 async def index():
@@ -33,5 +43,7 @@ async def favicon():
 @app.post("/api")
 async def api(text: str = Body(embed=True)):
     prediction = await predict_async(text)
+
+    logging.info(f"{prediction.upper()} - {text}]")
 
     return {"text": text, "sentiment": prediction}
