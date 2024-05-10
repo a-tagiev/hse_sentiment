@@ -1,38 +1,33 @@
 textarea {
   resize: none;
 
- }
-
-
- textarea.form-control:focus {
-  box-shadow: none;
-  border: 1px solid white;
- }
-
- textarea.form-control {
-  background-color:#444444;
+}
+textarea.form-control {
+  background-color: #444444;
   border: 1px solid #444444;
   color: white;
   border-radius: 1rem;
- }
-/* 
- textarea.placeholder {
-  color: #444444;
- } */
+}
+textarea.form-control:focus {
+  box-shadow: none;
+  border: 1px solid white;
+}
 
- /* CSS */
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: 'liga'1, 'calt'1;
 }
+
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 
- body {
+body {
   background-color: #222222;
-  color:aliceblue;
+  color: aliceblue;
   font-family: Inter;
 }
 
@@ -42,19 +37,18 @@ textarea {
 }
 
 .history-header {
-  text-align:center;
-  /* margin-top: -15px; */
+  text-align: center;
 }
 
 
 button.btn.btn-light.btn-lg {
-  outline: none;
   transition-duration: 0.2s;
   color: black;
   margin-top: 1em;
+  width: 20rem;
 }
 
-button.btn.btn-light.btn-lg:hover {
+button.btn.btn-light.btn-lg:hover:not(:disabled) {
   background-color: #dddddd;
   color: black;
 }
@@ -63,17 +57,12 @@ button.btn.btn-light.btn-lg:focus {
   color: #222222;
 }
 
-.btn-danger {
-  background-image: none;
-}
-
 button.btn.btn-danger.btn-lg {
-  outline: none;
   transition-duration: 0.2s;
   color: white;
   background-color: #ff0000;
   margin-top: 1em;
-  padding-top:1rem;
+  padding-top: 1rem;
   padding-bottom: 0.6rem;
 }
 
@@ -82,7 +71,7 @@ button.btn.btn-danger.btn-lg:hover {
   color: rgb(214, 214, 214);
 }
 
-#butt-3{
+#butt-3 {
   background-color: transparent;
   color: red;
   outline: none;
@@ -91,7 +80,8 @@ button.btn.btn-danger.btn-lg:hover {
   margin-left: 1em;
 }
 
-#butt-3:active, #butt-3:hover {
+#butt-3:active,
+#butt-3:hover {
   box-shadow: none;
   color: rgb(184, 0, 0);
 }
@@ -107,25 +97,28 @@ h2 {
   color: rgb(115, 115, 255);
   border-radius: 5px;
   font-size: 20px;
-  padding: 5px; /* + background opacity*/
+  padding: 5px;
+  /* + background opacity*/
 }
 
 .answer-own-2 {
   border: 1px solid rgba(255, 60, 60);
   background-color: rgba(255, 47, 47, 0.1);
-  color:rgba(255, 60, 60);
+  color: rgba(255, 60, 60);
   border-radius: 5px;
   font-size: 20px;
-  padding: 5px; /* + background opacity*/
+  padding: 5px;
+  /* + background opacity*/
 }
 
 .answer-own-3 {
   border: 1px solid rgba(60, 182, 60);
   background-color: rgba(47, 255, 47, 0.1);
-  color:rgb(74, 209, 74);
+  color: rgb(74, 209, 74);
   border-radius: 5px;
   font-size: 20px;
-  padding: 5px; /* + background opacity*/
+  padding: 5px;
+  /* + background opacity*/
 }
 
 .class-for-global-historic {
@@ -143,12 +136,12 @@ h2 {
 
 .class-for-historic-block2-v-2 {
   background-color: rgba(255, 0, 0, 0.1);
-  color:rgba(255, 60, 60);
+  color: rgba(255, 60, 60);
   padding: 5px;
 }
 
 .class-for-historic-block2-v-3 {
   background-color: rgba(0, 255, 0, 0.1);
-  color:rgb(74, 209, 74);
+  color: rgb(74, 209, 74);
   padding: 5px;
 }
