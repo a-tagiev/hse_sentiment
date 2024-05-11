@@ -43,6 +43,10 @@ async def on_message(message: Message) -> None:
                 data=json.dumps({"text": message.text}),
                 headers={"Content-Type": "application/json", "Accept": "application/json"}
         ) as response:
-            response_json = await response.json()
+            if response.status == 200:
+                response_json = await response.json()
+                sentiment = response_json["sentiment"].upper()
+            else:
+                sentiment = "NEUTRAL"
 
-            await message.reply(f"Тональность текста: {md.bold(response_json['sentiment'].upper())}")
+            await message.reply(f"Тональность текста: {md.bold(sentiment)}")
